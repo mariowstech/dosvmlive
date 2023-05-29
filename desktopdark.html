@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+ <html>
+ <body>
+    <head>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+        <title>DosVM 11 UI - Graphics accellerated</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+        <style>
+          
+            h1 {text-align: left; font-family: 'Montserrat', sans-serif;}
+            h3 {text-align: left; font-family: 'Montserrat', sans-serif;}
+            p {text-align: right; font-family: 'Montserrat', sans-serif;}
+            h2 {text-align: left; font-family: 'Montserrat', sans-serif;}
+            div {text-align: left; font-family: 'Montserrat', sans-serif;}
+            body {
+  background-image: url("images/wallpaper.png");
+}
+div {
+  color: rgb(0, 0, 0);
+}
+
+p {
+  color: rgb(0, 0, 0);
+}
+
+h1 {
+  color: rgb(252, 252, 252);
+}
+
+h3 {
+  color: rgb(252, 252, 252);
+}
+    .popup {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0%;
+      transform: translate(-50%, -50%);
+      width: 500px;
+      height: 400px;
+      background-color: #ffffff;
+      border: 1px solid #070707;
+      padding: 20px;
+      border-radius: 10px; 
+    }
+
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(48, 48, 48, 0);
+    }
+
+      .overlay {
+  z-index: 9999;
+}
+
+
+#taskbar {
+            background-color: #333333b0;
+            padding: 10px;
+            color: #fff;
+            position: fixed;
+            bottom: 1%;
+            width: 98%;
+            border-radius: 30px 30px 30px 30px; 
+        }
+        
+        #taskbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 16px;
+            margin-right: 10px;
+        }
+
+
+            </style>
+        </head>
+        
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
+      
+        <div id="popup1" class="popup">
+          <p><a onclick="closePopup('popup1')">✖</a></p>
+          <h2>Status center</h2>
+          <div>&nbsp;</div>
+          <div>(ℹ) Do not disturb is on.</div>
+          <div>You won't recive desktop notifications.</div>
+          <div>&nbsp;</div>
+          <div>No new notifications.</div>
+          <div>&nbsp;</div>
+        </div>
+      
+        <div id="popup2" class="popup">
+          <p><a onclick="closePopup('popup2')">✖</a></p>
+          <h2>DosVM 11 UI</h2>
+          <div>Emulation re-evolved.</div>
+          <div>&nbsp;</div>
+          <div>You're running DosVM OS v2 1.0</div>
+          <div>DosVM 11 UI - Build 9204 (Spring 2023)</div>
+          <div>&nbsp;</div>
+          <div>CPU: Intel (TM) Core 2 Duo Extreme @ 3,00Ghz</div>
+          <div>RAM: 4GB DDR2</div>
+          <div>Startup disk: SAMSUNG 860 EVO,256GB</div>
+          <div>Motherboard: mariowstech board 7DX, MFG on: 20/4/2023</div>
+          <div>&nbsp;</div>
+          <div>Made with ❤️ by mariowstech!</div>
+          <div><a href="https://discord.gg/P2hFGgNwnh">Discord</a> &nbsp; <a href="https://tiktok.com/@mariowstech">TikTok</a>  &nbsp; <a href="https://www.youtube.com/@mariowstech/">YouTube</a></div>
+          <div>©️ 2012 - 2023</div>
+          <div>&nbsp;</div>
+        </div>
+
+
+          <div id="popup3" class="popup">
+            <p><a onclick="closePopup('popup3')">✖</a></p>
+            <h2>Applications</h2>
+            <div>&nbsp;</div>
+          <div><i>👀 Soon...</i></div>
+          <div>&nbsp;</div>
+          <div>&nbsp;</div>
+            
+        </div>
+
+            <div id="popup4" class="popup">
+              <h2>Power</h2>
+              <div>&nbsp;</div>
+              <div><b>DosVM User</b></div>
+            <div>✅ Logged on</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div><a href="shutdownpre.html">🔌 Shutdown</a> <a href="start.html">💱 Restart</a> <a href="suspend.html">🌙 Suspend</a> <a href="dvmlogon.html">🔒 Logoff</a></div> 
+            <div>&nbsp;</div>
+              <button onclick="closePopup('popup4')">⬅️ Go back to desktop</button>
+            </div>
+
+              <div id="popup5" class="popup">
+                <p><a onclick="closePopup('popup5')">✖</a></p>
+                <h2>Start (beta)</h2>
+                <div>&nbsp;</div>
+                <div>&nbsp;</div>
+                <div>&nbsp;</div>
+                <div>&nbsp;</div>
+              <div>🤷‍♂️ There is nothing to display.</div>
+              <div>&nbsp;</div>
+              <div>&nbsp;</div>
+              <div>&nbsp;</div>
+              <div>&nbsp;</div>
+              <div>&nbsp;</div>
+              <div>&nbsp;</div>
+              <p><a href="shutdownpre.html">🔌 Shutdown</a></p>
+                
+            </div>
+    
+            <div id="popup6" class="popup">
+              <p><a onclick="closePopup('popup6')">✖</a></p>
+              <h2>Settings</h2>
+              <div>&nbsp;</div>
+              <div><a href=desktop.html>🌙 Night mode</a></div>
+              <div>Make it easier to the eyes to relax. Useful if DosVM will be used for a lot of time.</div>
+              <div>&nbsp;</div>
+              <div>↗ Launch terminal DosVM (10.1)</div>
+            <div>&nbsp;</div>
+            <div>ℹ About DosVM</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            
+              
+          </div>
+  
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <h1>&nbsp; &nbsp; &nbsp; DosVM 11 UI</h1>
+        <h3>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Emulation re-evolved.</h3>
+
+        <div id="taskbar">
+          <a onclick="openPopup('popup6')"></a>
+          <a onclick="openPopup('popup3')"><img src="images/application.png" width="30" height="30"></a>
+          <a onclick="openPopup('popup2')"><img src="images/info.png" width="30" height="30"></a>
+          <a onclick="openPopup('popup4')"><img src="images/thunderbolt.png" width="30" height="30"></a>
+          <a onclick="openPopup('popup1')"><img src="images/status.png" width="30" height="30"></a>
+          
+
+<script>
+function openPopup(popupId) {
+  var popup = document.getElementById(popupId);
+  var overlay = document.getElementById("overlay");
+
+  var minPaddingFromTop = window.innerHeight * 0.3;
+  var maxPaddingFromTop = window.innerHeight * 0.6;
+  var minPaddingFromLeft = window.innerWidth * 0.1;
+  var maxTop = window.innerHeight - popup.clientHeight;
+  var maxLeft = window.innerWidth - popup.clientWidth;
+
+  var randomTop = Math.floor(Math.random() * (maxPaddingFromTop - minPaddingFromTop) + minPaddingFromTop);
+  var randomLeft = Math.floor(Math.random() * (maxLeft - minPaddingFromLeft) + minPaddingFromLeft);
+
+  var allPopups = document.getElementsByClassName("popup");
+  for (var i = 0; i < allPopups.length; i++) {
+    allPopups[i].classList.remove("active");
+  }
+
+  popup.style.top = randomTop + "px";
+  popup.style.left = randomLeft + "px";
+
+  popup.classList.add("active");
+
+  var highestZIndex = getHighestZIndex(allPopups);
+  popup.style.zIndex = highestZIndex + 1;
+
+  popup.style.display = "block";
+  overlay.style.display = "block";
+}
+
+function getHighestZIndex(elements) {
+  var highestIndex = 0;
+  for (var i = 0; i < elements.length; i++) {
+    var zIndex = parseInt(window.getComputedStyle(elements[i]).zIndex);
+    if (zIndex > highestIndex) {
+      highestIndex = zIndex;
+    }
+  }
+  return highestIndex;
+}
+
+
+
+
+    function closePopup(popupId) {
+      var popup = document.getElementById(popupId);
+      var overlay = document.getElementById("overlay");
+
+      popup.style.display = "none";
+      overlay.style.display = "none";
+    }
+  </script>
+</script>
+
+ </body>
+ </html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+ <html>
+ <body>
+    <head>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+        <title>DosVM 11 UI - Graphics accellerated</title>
+    <style>
+        .popup {
+          display: none;
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 300px;
+          height: 200px;
+          background-color: #fff;
+          border: 1px solid #ccc;
+          padding: 20px;
+          border-radius: 10px;
+          text-align: center;
+        }
+      </style>
+      <script>
+        setTimeout(function() {
+          var popup = document.getElementById("popup");
+          popup.style.display = "block";
+        }, 4000); // 4 seconds delay
+      </script>
+    </head>
+    <body>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p><img src="images/splash.gif"></p>
+      <div id="popup" class="popup">
+        <h2>You're running a live version of DosVM!</h2>
+        <p>Welcome to beta 1 of DosVM LiveOS. This is a special version</p>
+        <p>that lets you test DosVM OS in your web browser without</p>
+        <p>needing to download it, useful if you don't have much disk space.</p>
+        <a href="desktop.html">↗️ Go to the desktop!</a>
